@@ -42,7 +42,9 @@ def load_model(model_name):
 PATH_TO_LABELS = 'models/research/object_detection/data/mscoco_label_map.pbtxt'
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
 
-model_name = 'ssd_inception_v2_coco_2017_11_17'
+# model_name = 'ssd_inception_v2_coco_2017_11_17' worked
+# model_name = 'faster_rcnn_nas_coco_2018_01_28'  Allocation of 74317824 exceeds 10% of system memory.
+model_name = 'rfcn_resnet101_coco_2018_01_28' #worked
 detection_model = load_model(model_name)
 
 
